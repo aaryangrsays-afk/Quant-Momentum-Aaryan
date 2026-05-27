@@ -4,7 +4,7 @@
 > and machine learning to study whether momentum actually exists in real markets.
 
 ---
-*First-year independent research project — built alongside a tech internship*
+*First-year independent research project, built alongside a tech internship*
 ## Overview
 This project explores whether momentum exists in US equities using systematic backtesting and simple machine learning models. I started by building intuition around stocks, returns, and data handling using `yfinance` and pandas, then gradually moved into formal factor construction and portfolio testing.
 
