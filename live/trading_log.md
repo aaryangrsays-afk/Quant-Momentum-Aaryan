@@ -1,4 +1,4 @@
-## Trade Entry — June 2026
+## Pre-Trade Plan — June 2026
 
 **Signal date:** June 2026
 **Strategy:** Sector-neutral momentum, top 1 per sector
@@ -22,3 +22,21 @@ signal environment and energy concentration risk)
 (top signal 8.5% vs 39.9%). Energy heavily represented in 
 top 14 due to Iran conflict/oil price dynamics. Deployed 
 50% capital as risk management measure.
+## Trade Entry — June 5 2026
+
+##Trade Execution June 5 2026
+Strategy: Sector-neutral momentum, top 1 per sector
+Capital deployed: USD 249.89
+
+| Stock | Sector | Shares | Avg Price | Cost Basis |
+|---|---|---|---|---|
+| C   | Financials  | 0.3723 | $134.28 | $49.99 |
+| DE  | Industrials | 0.0834 | $598.81 | $49.94 |
+| IBM | Technology  | 0.1637 | $305.34 | $49.98 |
+| MDT | Healthcare  | 0.6147 | $81.34  | $50.00 |
+| VLO | Energy      | 0.1916 | $260.86 | $49.98 |
+
+Benchmark: SPY at entry = $754
+Cash reserve: USD 8.20
+Stop loss: Portfolio drops below USD 212.50
+Next rebalance: July 1 2026
