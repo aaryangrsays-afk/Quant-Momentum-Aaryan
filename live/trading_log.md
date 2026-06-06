@@ -40,3 +40,6 @@ Benchmark: SPY at entry = $754
 Cash reserve: USD 8.20
 Stop loss: Portfolio drops below USD 212.50
 Next rebalance: July 1 2026
+
+June 6 update: Portfolio down $6.89 (2.75%) from entry. IBM largest detractor at -$4.08 due to June 5 tech sector selloff (-4.7%) driven by strong ADP payroll data pushing rate hike expectations higher, compounded by IBM-specific whistleblower lawsuit. MDT only green position. Portfolio decline broadly in line with SPY (-2%). No action taken — holding per strategy rules until July 1 rebalance."
+
