@@ -1,6 +1,24 @@
 # Trading Log — Quant Momentum Strategy
 
 ---
+## Strategy Note — Capital Constraints
+
+The live strategy runs 5 positions due to capital constraints ($250 deployed).
+This differs from the backtested 57-stock model in key ways:
+
+- **Concentration:** 20% per position vs ~7% in backtest (14 of 57 stocks)
+- **Selection:** Sector-neutral top-1 per sector vs global top-14 ranking
+- **Risk profile:** Single stock events have outsized impact at this scale
+
+This is a capital-constrained approximation of the full strategy, not an
+equivalent deployment. Live results should be interpreted in this context.
+
+## Strategy Evaluation Criteria
+
+Strategy will be considered failing if:
+- Hit rate stays below 50% for 3 consecutive months
+- Portfolio drops more than 25% from starting capital ($187.50)
+- Live monthly returns are consistently worse than SPY for 4+ months in a row
 
 ## Pre-Trade Plan — June 2026
 
@@ -48,3 +66,4 @@
 ## Portfolio Update — June 6 2026
 
 Portfolio down $6.89 (2.75%) from entry. IBM largest detractor at -$4.08 due to June 5 tech sector selloff (-4.7%) driven by strong ADP payroll data pushing rate hike expectations higher, compounded by IBM-specific whistleblower lawsuit. MDT only green position. Portfolio decline broadly in line with SPY (-2%). No action taken — holding per strategy rules until July 1 rebalance.
+
