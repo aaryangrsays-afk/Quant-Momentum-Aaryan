@@ -13,22 +13,23 @@ The key finding is that momentum does exist cross-sectionally, but is highly sen
 ---
 
 ## Strategy Logic
-- Universe: 20 US large-cap stocks across tech, financials, healthcare, and energy  
-- Signal: Cross-sectional momentum based on past 1M, 3M, 6M, and 12M cumulative returns  
-- Ranking: Each month, stocks are ranked by trailing performance (sector-aware in some tests)  
-- Portfolio: Long top 5 ranked stocks, equal-weighted; compared against bottom 5  
-- Rebalancing: Monthly using non-overlapping return windows to avoid lookahead bias  
+- Universe: S&P 500 — 503 large-cap US stocks across 11 sectors
+- Signal: Cross-sectional momentum based on past 1-month return
+- Ranking: Each month, all 503 stocks ranked globally by trailing return
+- Portfolio: Long top 25 ranked stocks, equal-weighted
+- Rebalancing: Monthly, non-overlapping return windows
 
 ---
 
 ## Backtest Results
 
-| Metric | 2 Year | 3 Year | 5 Year |
-|---|---|---|---|
-| Sharpe Ratio | 1.29 | 1.64 | 0.92 |
-| Max Drawdown | -12.9% | -12.9% | -30.50% |
-| Hit Rate | 54% | 58% | 53% |
-| Avg Monthly Return (Top 5) | 2.4% | 2.66% | 1.93% |
+| Metric | 2 Year | 3 Year | 5 Year | 3 Year (S&P 500) |
+|---|---|---|---|---|
+| Sharpe Ratio | 1.29 | 1.64 | 0.92 | **1.53** |
+| Max Drawdown | -12.9% | -12.9% | -30.50% | **-9.38%** |
+| Hit Rate | 54% | 58% | 53% | **57.14%** |
+| Avg Monthly Return | 2.4% | 2.66% | 1.93% | **3.50%** |
+| Universe | 57 stocks | 57 stocks | 57 stocks | **503 stocks** |
 
 ---
 
