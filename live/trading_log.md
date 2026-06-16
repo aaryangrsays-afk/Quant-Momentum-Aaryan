@@ -14,6 +14,8 @@ This differs from the backtested 57-stock model in key ways:
 This is a capital-constrained approximation of the full strategy, not an
 equivalent deployment. Live results should be interpreted in this context.
 
+---
+
 ## Strategy Evaluation Criteria
 
 Strategy will be considered failing if:
@@ -27,7 +29,8 @@ Strategy will be considered failing if:
 
 **Signal date:** June 2026
 **Strategy:** Sector-neutral momentum, top 1 per sector
-**Total capital deployed:** USD 250 (50% of $500 — reduced due to weak signal environment and energy concentration risk)
+**Total capital deployed:** USD 250 (50% of $500 — reduced due to weak
+signal environment and energy concentration risk)
 **Capital held in reserve:** USD 250
 
 | Stock | Sector | Signal Return | Allocation |
@@ -42,7 +45,9 @@ Strategy will be considered failing if:
 **Stop loss:** Portfolio drops below USD 212.50 (15%)
 **Next rebalance:** First trading day of July 2026
 
-**Notes:** Weak signal environment this month vs May 2026 (top signal 8.5% vs 39.9%). Energy heavily represented in top 14 due to Iran conflict/oil price dynamics. Deployed 50% capital as risk management measure.
+**Notes:** Weak signal environment this month vs May 2026 (top signal
+8.5% vs 39.9%). Energy heavily represented in top 14 due to Iran
+conflict/oil price dynamics. Deployed 50% capital as risk management measure.
 
 ---
 
@@ -68,27 +73,42 @@ Strategy will be considered failing if:
 
 ## Portfolio Update — June 6 2026
 
-Portfolio down $6.89 (2.75%) from entry. IBM largest detractor at -$4.08 due to June 5 tech sector selloff (-4.7%) driven by strong ADP payroll data pushing rate hike expectations higher, compounded by IBM-specific whistleblower lawsuit. MDT only green position. Portfolio decline broadly in line with SPY (-2%). No action taken — holding per strategy rules until July 1 rebalance.
+Portfolio down $6.89 (2.75%) from entry. IBM largest detractor at -$4.08
+due to June 5 tech sector selloff (-4.7%) driven by strong ADP payroll
+data pushing rate hike expectations higher, compounded by IBM-specific
+whistleblower lawsuit. MDT only green position. Portfolio decline broadly
+in line with SPY (-2%). No action taken — holding per strategy rules
+until July 1 rebalance.
 
 ---
 
 ## Portfolio Update — June 13 2026
 
-Portfolio down $6.24 (-2.50%) from entry. IBM remains the dominant detractor at -$5.42 (-10.8% on position), now responsible for the entire portfolio loss — excluding IBM, the remaining four positions are net roughly flat (-$0.83 combined). C has turned positive (+$2.07).
+Portfolio down $6.24 (-2.50%) from entry. IBM remains dominant detractor
+at -$5.42 (-10.8% on position), responsible for the entire portfolio loss
+— excluding IBM, remaining four positions net roughly flat (-$0.83
+combined). C has turned positive (+$2.07).
 
-IBM has been hit by four separate negative catalysts since February: (1) Anthropic's Claude Code threatening IBM's COBOL modernisation consulting revenue, (2) the June 5 tech sector selloff on rising Treasury yields, (3) Gartner data showing IBM Consulting revenue fell 12.8%, validating broader IT services slowdown fears, and (4) market skepticism over IBM's $10B quantum computing investment being read as expensive and speculative. IBM's 52-week low ($212.34) is now close to the portfolio stop loss level ($212.50).
+IBM hit by four separate negative catalysts since February:
+1. Anthropic's Claude Code threatening IBM's COBOL modernisation
+   consulting revenue
+2. June 5 tech sector selloff on rising Treasury yields
+3. Gartner data showing IBM Consulting revenue fell 12.8%
+4. Market skepticism over IBM's $10B quantum computing investment
 
-This is assessed as a structural deterioration in IBM's momentum signal, not short-term noise.
-
-**Decision:** Run momentum script ahead of schedule to check IBM's current ranking before July 1 rebalance.
+Assessed as structural deterioration in IBM's momentum signal, not
+short-term noise. Decision made to run momentum script ahead of schedule
+to assess IBM's current ranking.
 
 ---
 
-## Mid-Month Rebalance — June 15 2026 (Pending)
+## Mid-Month Rebalance — June 15 2026
 
-**Reason:** Ran momentum script on June 13 ahead of the scheduled July 1 rebalance due to IBM's deteriorating fundamentals (see June 13 update). Result: IBM has fallen completely out of the top 14 momentum rankings — confirming the strategy signal itself supports exiting the position, independent of the fundamental concerns.
+**Trigger:** IBM fell completely out of top 14 momentum rankings —
+strategy signal independently confirmed exit regardless of fundamental
+concerns.
 
-**New Top 14 Rankings (June 2026 signal):**
+**Momentum Rankings — June 2026 Signal:**
 
 | Rank | Stock | Sector | Signal Return |
 |---|---|---|---|
@@ -107,10 +127,38 @@ This is assessed as a structural deterioration in IBM's momentum signal, not sho
 | 13 | KO | Consumer Defensive | 4.57% |
 | 14 | HD | Consumer Cyclical | 4.32% |
 
-**Action:**
-- **SELL** IBM — 0.1637 shares — realised loss approx. -$5.42
-- **BUY** LIN (Linde, Basic Materials) — approx. $44.57 — rank #10, fills vacant sector slot left by IBM exit
+**Rule change note:** Original strategy used sector-neutral top-1 per
+sector selection. For this rebalance, switched to highest-signal stock
+regardless of sector overlap — primary goal is beating SPY. This results
+in 2 of 5 positions in Financials (C + BAC). Tradeoff: higher expected
+return signal, higher sector concentration risk. Documented as deliberate
+deviation from original rule.
 
-**Portfolio after rebalance:** C (Financials), MDT (Healthcare), DE (Industrials), VLO (Energy), LIN (Basic Materials)
+**Trade Execution — June 15 2026 9:55-9:58pm SGT:**
 
-**Note:** This is a mid-month rebalance, not the standard July 1 cycle. Justified because IBM did not merely underperform — it fell completely out of the top 14, meaning the strategy's own signal independently confirmed the exit. The July 1 rebalance will proceed as normal using fresh rankings at that time.
+| Action | Stock | Shares | Fill Price | Proceeds |
+|---|---|---|---|---|
+| SELL | IBM | 0.1630 | $269.50 | $43.93 |
+| BUY | BAC | 0.9246 | $56.24 | $52.00 |
+
+**IBM Realised P&L:** $43.93 received vs $49.98 cost basis = **-$6.05 loss**
+
+**Portfolio after rebalance:**
+
+| Stock | Sector | Shares | Avg Price | Cost Basis |
+|---|---|---|---|---|
+| C | Financials | 0.3723 | $134.28 | $49.99 |
+| BAC | Financials | 0.9246 | $56.24 | $52.00 |
+| DE | Industrials | 0.0834 | $598.81 | $49.94 |
+| MDT | Healthcare | 0.6147 | $81.34 | $50.00 |
+| VLO | Energy | 0.1916 | $260.86 | $49.98 |
+
+**Total deployed: $251.91**
+**Next rebalance: July 1 2026**
+**Stop loss: Portfolio drops below $212.50**
+
+**Post-rebalance note:** Exiting IBM recovered approximately $3.24 of
+unrealised loss by removing the largest detractor. Portfolio now has
+zero tech exposure — fully allocated to Financials, Healthcare,
+Industrials and Energy. IBM residual position of 0.0007 shares ($0.19)
+remains as a rounding artefact from fractional share execution — negligible.
