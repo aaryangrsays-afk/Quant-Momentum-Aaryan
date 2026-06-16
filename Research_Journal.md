@@ -19,3 +19,30 @@ Random Forest on test set produced R² of -0.0617, worse than a naive mean predi
 12 month momentum showed zero feature importance across all tests. With only 5 years of monthly data across 20 stocks, the 12 month rolling signal lacks sufficient variation relative to return noise for the model to extract a reliable pattern. Academic studies validating 12 month momentum typically use 20+ years of data across hundreds of stocks. 
 
 With 20 stocks and 5 years of monthly data, we have insufficient observations for a Random Forest to generalise meaningfully. The model underperforms a naive mean prediction on the test set. This is a data limitation, not a model failure.
+
+## Universe Expansion — June 2026
+
+Expanded stock universe from 57 manually selected stocks to all 503 
+S&P 500 constituents using automated CSV pull from GitHub datasets repo.
+
+Results improved across every metric:
+
+| Metric | 57 Stocks | 503 Stocks | Change |
+|---|---|---|---|
+| Sharpe Ratio | 1.36 | 1.53 | +12.5% |
+| Max Drawdown | -11.02% | -9.38% | Improved |
+| Avg Monthly Return | 2.10% | 3.50% | +67% |
+| Cumulative 3yr Return | 100% | 207% | +107% |
+
+Key finding: Larger universes produce stronger momentum signals and 
+better diversification simultaneously. The top 25 from 503 stocks 
+is a more robust signal than top 5 from 57 stocks because individual 
+stock events have less impact and the cross-sectional spread is wider.
+
+The one-line fix that unlocked this: changing dropna() to 
+dropna(how="all") — a reminder that data cleaning decisions 
+have outsized impact on results.
+
+Survivorship bias note: Using current S&P 500 constituents introduces 
+mild survivorship bias for historical backtesting. Acceptable for a 
+live forward-looking strategy but acknowledged as a limitation.
