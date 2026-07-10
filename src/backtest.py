@@ -38,7 +38,7 @@ df = df.sort_values(["stock", "date"]).reset_index(drop=True)
 df = df.dropna(subset=["sector"])
 print("Step 7: Data reshaped")
 
-# --- NEXT MONTH RETURNS (before ranking so shift works correctly) ---
+# --- NEXT MONTH RETURNS ---
 df["next_return"] = df.groupby("stock")["return"].shift(-1)
 print("Step 8: Next month returns computed")
 
