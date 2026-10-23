@@ -434,3 +434,23 @@ semiconductor and AI infrastructure cycle dominated 12-month returns
 across the S&P 500. Sector cap rule (max 2 per sector) was relaxed this
 rebalance given signal strength and verification. To be reviewed before
 August rebalance.
+
+---
+
+## October 23, 2026 — Stop-loss exit: BE
+
+**Trigger:** BE traded below its vol-scaled stop (-25.0% cap, stop $210.37 vs
+entry $280.49) during the Oct 23 US session. Exited intraday rather than
+waiting for the close-based rule's next-session sell — price was ~9% below the
+stop, so a close back above it was unlikely. Logged as a deliberate deviation.
+
+| Action | Stock | Shares | Fill Price | Realised P&L |
+|---|---|---|---|---|
+| SELL | BE | 0.1697 | $191.31 | -$15.13 |
+
+**Note:** the exit fill was -31.8% vs entry, well beyond the -25% stop, because
+BE fell through the stop level in one move. Close-based stops cap the trigger,
+not the loss.
+
+**After exit:** 5 positions (MU, LITE, MRNA, ILMN, VLO). Proceeds (~$32.47)
+held in cash until the November rebalance, per the stop rule.
