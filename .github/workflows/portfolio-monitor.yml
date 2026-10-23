@@ -31,6 +31,7 @@ jobs:
 
       - name: Run monitor
         env:
+          TZ: Asia/Singapore
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           POSITIONS_FILE: ${{ github.workspace }}/live/positions.json
           STATE_FILE: ${{ runner.temp }}/portfolio_state.txt
