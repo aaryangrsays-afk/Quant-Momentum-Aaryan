@@ -1,0 +1,50 @@
+name: Portfolio monitor
+
+on:
+  schedule:
+    # 23:00 UTC Sun–Thu = 07:00 SGT Mon–Fri, after each US close.
+    # GitHub may start scheduled runs 5–30 min late under load.
+    - cron: "0 23 * * 0-4"
+  workflow_dispatch: {}   # "Run workflow" button for manual tests
+
+permissions:
+  contents: write   # lets the job commit back newly frozen stop_pct values
+
+concurrency:
+  group: portfolio-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Run monitor
+        env:
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          POSITIONS_FILE: ${{ github.workspace }}/live/positions.json
+          STATE_FILE: ${{ runner.temp }}/portfolio_state.txt
+        run: python scripts/portfolio_monitor.py
+
+      # If a new position got its stop frozen this run, save it so it doesn't
+      # drift on the next run.
+      - name: Commit frozen stops
+        if: always()
+        run: |
+          if ! git diff --quiet -- live/positions.json; then
+            git config user.name  "portfolio-monitor[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add live/positions.json
+            git commit -m "monitor: freeze stop_pct for new position(s)"
+            git push
+          fi

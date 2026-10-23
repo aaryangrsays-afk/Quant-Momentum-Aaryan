@@ -1,0 +1,32 @@
+{
+  "MU": {
+    "shares": 0.0443,
+    "avg_price": 1073.11,
+    "stop_pct": 0.25
+  },
+  "LITE": {
+    "shares": 0.0498,
+    "avg_price": 945.84,
+    "stop_pct": 0.25
+  },
+  "MRNA": {
+    "shares": 0.2534,
+    "avg_price": 188.6,
+    "stop_pct": 0.25
+  },
+  "BE": {
+    "shares": 0.1697,
+    "avg_price": 280.49,
+    "stop_pct": 0.25
+  },
+  "ILMN": {
+    "shares": 0.171,
+    "avg_price": 278.2,
+    "stop_pct": 0.2016
+  },
+  "VLO": {
+    "shares": 0.1189,
+    "avg_price": 395.19,
+    "stop_pct": 0.1479
+  }
+}
