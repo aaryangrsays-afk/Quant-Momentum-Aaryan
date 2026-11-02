@@ -465,7 +465,8 @@ Exits: ILMN, LITE. Entries: DELL, MPC, CRL. Carry-overs trimmed to equal weight 
 **Execution error:** a market BUY of 0.1344 ILMN at $237.98 filled at the open
 (14:30 UTC) before the rebalance. ILMN was not in the November signal, and the
 stop rule says stopped-out cash (BE proceeds) waits for the rebalance. The lot
-was sold minutes later with the rest of ILMN. Cause to be investigated.
+was sold minutes later with the rest of ILMN. Cause: manual order placed by
+mistake (not a script or automation issue).
 
 | Action | Stock | Shares | Fill Price | Realised P&L |
 |---|---|---|---|---|
