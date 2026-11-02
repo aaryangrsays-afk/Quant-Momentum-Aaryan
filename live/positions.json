@@ -1,27 +1,32 @@
 {
+  "MRNA": {
+    "shares": 0.19,
+    "avg_price": 221.61,
+    "stop_pct": 0.25
+  },
   "MU": {
     "shares": 0.0443,
-    "avg_price": 1073.11,
-    "stop_pct": 0.25
-  },
-  "LITE": {
-    "shares": 0.0498,
-    "avg_price": 945.84,
-    "stop_pct": 0.25
-  },
-  "MRNA": {
-    "shares": 0.2534,
-    "avg_price": 188.6,
-    "stop_pct": 0.25
-  },
-  "ILMN": {
-    "shares": 0.171,
-    "avg_price": 278.2,
-    "stop_pct": 0.2016
+    "avg_price": 874.61,
+    "stop_pct": 0.229
   },
   "VLO": {
-    "shares": 0.1189,
-    "avg_price": 395.19,
-    "stop_pct": 0.1479
+    "shares": 0.1087,
+    "avg_price": 385.65,
+    "stop_pct": 0.176
+  },
+  "DELL": {
+    "shares": 0.1,
+    "avg_price": 414.21,
+    "stop_pct": 0.25
+  },
+  "MPC": {
+    "shares": 0.096,
+    "avg_price": 435.71,
+    "stop_pct": 0.172
+  },
+  "CRL": {
+    "shares": 0.117,
+    "avg_price": 356.89,
+    "stop_pct": 0.195
   }
 }

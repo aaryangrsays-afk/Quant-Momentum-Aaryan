@@ -454,3 +454,37 @@ not the loss.
 
 **After exit:** 5 positions (MU, LITE, MRNA, ILMN, VLO). Proceeds (~$32.47)
 held in cash until the November rebalance, per the stop rule.
+
+---
+
+## November 2, 2026 — Monthly rebalance
+
+**Signal (Nov 2026, sector-capped top 6):** MRNA, MU, DELL, MPC, VLO, CRL.
+Exits: ILMN, LITE. Entries: DELL, MPC, CRL. Carry-overs trimmed to equal weight (~$42).
+
+**Execution error:** a market BUY of 0.1344 ILMN at $237.98 filled at the open
+(14:30 UTC) before the rebalance. ILMN was not in the November signal, and the
+stop rule says stopped-out cash (BE proceeds) waits for the rebalance. The lot
+was sold minutes later with the rest of ILMN. Cause to be investigated.
+
+| Action | Stock | Shares | Fill Price | Realised P&L |
+|---|---|---|---|---|
+| BUY (error) | ILMN | 0.1344 | $237.98 (market) | — |
+| SELL | LITE | 0.0498 | $757.00 | -$5.71 |
+| SELL | ILMN | 0.3054 | $228.25 | -$9.85 |
+| SELL | VLO | 0.0102 | $385.65 | +$0.21 |
+| BUY | MPC | 0.0960 | $435.71 | — |
+| BUY | DELL | 0.1000 | $414.21 | — |
+| SELL | MRNA | 0.0634 | $221.61 | +$4.97 |
+| BUY | CRL | 0.1170 | $356.89 | — |
+
+**Stops (vol-scaled, from the Nov signal run):** carry-overs re-anchored at
+rebalance price — MRNA $221.61 (-25.0%), MU $874.61 (-22.9%, no trade, last
+price used), VLO $385.65 (-17.6%). New: DELL $414.21 (-25.0%), MPC $435.71
+(-17.2%), CRL $356.89 (-19.5%).
+
+**After rebalance:** 6 positions, ~$41–42 each (MU ~$39). Cash ~S$4.64.
+NAV S$321.37.
+
+**Concentration note:** MPC + VLO (US refiners) and MU + DELL (AI hardware)
+are each effectively one factor; sector cap does not catch this.
