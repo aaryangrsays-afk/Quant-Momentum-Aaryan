@@ -489,3 +489,32 @@ NAV S$321.37.
 
 **Concentration note:** MPC + VLO (US refiners) and MU + DELL (AI hardware)
 are each effectively one factor; sector cap does not catch this.
+
+
+---
+
+## November 23, 2026 — Stop-loss exits: MU, DELL
+
+**Trigger:** both closed below their vol-scaled stops on Nov 20 (monitor email
+Nov 23 11:30 SGT): MU $594.51 vs stop $674.32; DELL $278.02 vs stop $310.66.
+Rule: sell next session, hold cash until the December rebalance.
+
+**Whipsaw:** both gapped back above their stops at the Nov 23 open (MU +20.8%,
+DELL +25.2% vs Friday close). Sold anyway per the rule; exits came in better
+than the stop levels.
+
+| Action | Stock | Shares | Fill Price | P&L vs Nov 2 anchor |
+|---|---|---|---|---|
+| SELL | MU | 0.0443 | $716.00 | -$7.03 (-18.1%) |
+| SELL | DELL | 0.1000 | $345.08 | -$6.91 (-16.7%) |
+
+**After exits:** 4 positions (MRNA, VLO, MPC, CRL). Proceeds (~$66.23) held in
+cash until the December rebalance. DELL reports Nov 24 after close (implied
+move +/-16.5%); not held through it.
+
+**Watch:** MPC trading at ~$359.83 intraday, below its $360.77 stop. The rule
+is close-based, so it only fires if MPC closes below the stop.
+
+**Open question for December:** every backtest version (incl. point-in-time)
+shows the vol-scaled stop failing to improve Sharpe. Decide keep vs drop as a
+rule change at the rebalance, not mid-month.

@@ -4,20 +4,10 @@
     "avg_price": 221.61,
     "stop_pct": 0.25
   },
-  "MU": {
-    "shares": 0.0443,
-    "avg_price": 874.61,
-    "stop_pct": 0.229
-  },
   "VLO": {
     "shares": 0.1087,
     "avg_price": 385.65,
     "stop_pct": 0.176
-  },
-  "DELL": {
-    "shares": 0.1,
-    "avg_price": 414.21,
-    "stop_pct": 0.25
   },
   "MPC": {
     "shares": 0.096,
